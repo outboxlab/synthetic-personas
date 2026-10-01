@@ -2,8 +2,34 @@
 
 Thank you for helping improve Synthetic Personas.
 
-Useful contributions include portability tests across LLMs/agents, new adapters, methodology critiques, reproducible test cases, design-source integration improvements, evidence-labeling improvements, documentation and examples.
+This project separates the vendor-neutral methodology from platform-specific adapters. Contributions should preserve that boundary.
 
-When reporting behavior, include the environment/model, package version, input type, expected behavior, observed behavior, and whether the issue affects the methodology or only an adapter.
+## Useful contributions
 
-Do not submit real participant PII, private research data, credentials or proprietary prototypes.
+- portability tests across LLMs and agents;
+- new adapters;
+- methodology critiques;
+- reproducible test cases;
+- design-source integration improvements;
+- evidence-labeling improvements;
+- documentation and examples.
+
+## Reporting feedback
+
+Include, when possible:
+1. environment/model;
+2. Synthetic Personas version;
+3. input type and fidelity;
+4. expected behavior;
+5. observed behavior;
+6. whether the issue appears methodological or platform-specific.
+
+Use the repository issue templates so feedback can be compared across environments.
+
+## Methodology changes
+
+Changes to core methodology should explain the research rationale and which invariant, if any, is being changed. Platform-specific limitations should normally be handled in an adapter rather than weakening the core protocol.
+
+## Privacy
+
+Do not submit participant PII, private research data, credentials, confidential prototypes or proprietary material you do not have permission to share.
