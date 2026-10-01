@@ -1,115 +1,153 @@
 # Synthetic Personas 🧪
 
-**Test ideas before testing people.**
+**Teste ideias antes de testar pessoas.**
 
-An open protocol for AI-assisted synthetic usability testing across LLMs and agent environments.
+Um protocolo aberto para testes de usabilidade sintéticos assistidos por IA, compatível com diferentes LLMs e ambientes de agentes.
 
-**Created and maintained by OutBoxLab.**
+**Criado e mantido pela OutBoxLab.**
 
-> Public beta: `v0.1.0-beta` · MIT Licensed
+> Beta público: `v0.1.0-beta` · Licença MIT
 
-Synthetic Personas guides AI agents through structured synthetic usability tests for concepts, journeys, wireframes and prototypes while keeping simulated behavior clearly separated from real user evidence.
+🇧🇷 **Português** · [🇺🇸 English](README.en.md)
 
-## Why Synthetic Personas?
+Synthetic Personas guia agentes de IA na execução de testes estruturados de usabilidade sintética para conceitos, jornadas, wireframes e protótipos, mantendo o comportamento simulado claramente separado de evidências obtidas com usuários reais.
 
-Product teams often need to explore an idea before formal research is available or before a prototype is mature enough for a full study. Synthetic Personas provides a structured way to use AI for that exploration without pretending simulations are real users.
+## Por que Synthetic Personas?
 
-It is designed as an open protocol rather than a model-specific prompt, so the methodology can travel across ChatGPT, Claude, Hermes and other agent environments.
+Times de produto frequentemente precisam explorar uma ideia antes de uma pesquisa formal estar disponível ou antes de um protótipo estar maduro o suficiente para um estudo completo.
 
-## What it does
+Synthetic Personas oferece uma forma estruturada de usar IA nessa exploração sem tratar simulações como se fossem usuários reais.
 
-The conversational wizard helps define the research goal, understand prototype fidelity, inspect available materials, select or create personas, formulate neutral missions, run simulations and synthesize findings.
+Ele foi criado como um protocolo aberto, e não como um prompt preso a um modelo específico. Assim, a metodologia pode viajar entre ChatGPT, Claude, Hermes e outros ambientes de agentes.
 
-You do not need to know how to structure a usability test before starting.
+## O que ele faz
 
-## Quick start
+Um wizard conversacional ajuda você a:
+
+- definir o objetivo da pesquisa;
+- entender a fidelidade do material;
+- analisar os materiais disponíveis;
+- selecionar, importar ou criar personas;
+- formular missões neutras;
+- executar as simulações;
+- consolidar descobertas, hipóteses e recomendações.
+
+Você não precisa saber estruturar um teste de usabilidade antes de começar.
+
+## Comece aqui
 
 ### ChatGPT
-Provide this repository or its files to a ChatGPT environment that can read them. Start with `SKILL.md`, then say `Install Personas` or `Instalar Personas`.
+
+Disponibilize este repositório ou seus arquivos em um ambiente do ChatGPT que consiga lê-los. Comece por `SKILL.md` e diga:
+
+**`Instalar Personas`**
 
 ### Claude
-Make the repository files available in the Claude environment/project. Start with `SKILL.md` and `adapters/claude/SKILL.md`, then say `Install Personas`.
+
+Disponibilize os arquivos do repositório no projeto/ambiente Claude. Carregue `SKILL.md` e `adapters/claude/SKILL.md` e diga:
+
+**`Instalar Personas`**
 
 ### Hermes
-Make the repository available to the Hermes workspace/agent. Load `SKILL.md` and `adapters/hermes/SKILL.md`, then say `Install Personas`.
 
-### Other agents
-Load `SKILL.md` and `adapters/generic/SYSTEM_PROMPT.md`. The protocol adapts to the capabilities actually available.
+Disponibilize o repositório no workspace do Hermes. Carregue `SKILL.md` e `adapters/hermes/SKILL.md` e diga:
 
-> Exact installation mechanics vary by host. Synthetic Personas does not require a specific vendor, MCP server or design integration.
+**`Instalar Personas`**
 
-## Your first test
+### Outros agentes
 
-After setup, say `New Test` or its equivalent in your language.
+Carregue `SKILL.md` e `adapters/generic/SYSTEM_PROMPT.md`. O protocolo se adapta às capacidades realmente disponíveis no ambiente.
 
-`Project → Fidelity → Materials → Personas → Learning goals → Missions → Test plan → Run → Synthesis → Report`
+> A mecânica exata de instalação varia conforme o host. Synthetic Personas não exige um fornecedor, servidor MCP ou integração de design específicos.
 
-The wizard skips information already provided instead of turning setup into a questionnaire marathon.
+## Seu primeiro teste
 
-## Inputs
+Depois da configuração, diga:
 
-Use whatever the environment supports:
-- connected design sources such as Figma;
-- screenshots or images;
+**`Novo teste`**
+
+O wizard conduz o processo:
+
+`Projeto → Fidelidade → Materiais → Personas → Objetivos de aprendizado → Missões → Plano de teste → Execução → Síntese → Relatório`
+
+Informações que você já forneceu são aproveitadas. O wizard não transforma a configuração em uma maratona de perguntas.
+
+## Materiais de entrada
+
+Use o que seu ambiente suportar:
+
+- fontes de design conectadas, como Figma;
+- screenshots ou imagens;
 - PDFs;
-- accessible prototype links;
-- user-described journeys.
+- links de protótipos acessíveis;
+- jornadas descritas pelo usuário.
 
-Figma is optional.
+**Figma é opcional.**
 
-## Method
+## Método
 
-The default test sequence is:
-1. free exploration without mission or priming;
-2. mental-model investigation;
-3. persona-specific neutral missions;
-4. consolidation across personas;
-5. findings, uncertainties, hypotheses and recommendations.
+A sequência padrão do teste é:
 
-Evaluation changes with fidelity. A wireframe is evaluated as a wireframe, not as finished visual design.
+1. exploração livre, sem missão e sem direcionamento;
+2. investigação do modelo mental;
+3. missões neutras específicas por persona;
+4. consolidação entre personas;
+5. descobertas, incertezas, hipóteses e recomendações.
 
-## Example
+A avaliação muda de acordo com a fidelidade. **Um wireframe é avaliado como wireframe, não como interface visual finalizada.**
 
-See `examples/first-test.md` for a compact end-to-end example.
+## Integridade da pesquisa
 
-## Architecture
+Participantes sintéticos são **simulações, não usuários reais**.
 
-- `core/` — vendor-neutral protocol, wizard, methodology, capabilities and evidence model
-- `workflows/` — install, new test, run, audit and update flows
-- `adapters/` — environment-specific mappings
-- `integrations/` — optional design-source integrations
-- `personas/` — persona schema and examples
-- `templates/` — reusable briefing, test-plan and report structures
-- `examples/` — runnable examples
+Eles podem ajudar a explorar hipóteses, identificar possíveis fricções, ensaiar jornadas e preparar pesquisas reais, mas não substituem evidências empíricas obtidas com pessoas.
 
-## Research integrity
+O protocolo mantém separados:
 
-Synthetic participants are simulations. They can help explore hypotheses, identify potential friction, rehearse journeys and prepare real research, but they are not substitutes for empirical user evidence.
+**evidência fornecida → comportamento sintético → interpretação → hipótese → recomendação → limitações/desconhecidos**
 
-The protocol separates provided evidence, synthetic behavior, interpretation, hypotheses, recommendations and unknowns.
+Essa separação é uma parte central do método.
 
-## Language
+## Arquitetura
 
-Repository documentation is maintained in English for portability and open-source collaboration. The wizard is multilingual and should automatically use the user's language unless asked otherwise.
+- `core/` → protocolo, wizard, metodologia, capacidades e modelo de evidência
+- `workflows/` → instalação, novo teste, execução, auditoria e atualização
+- `adapters/` → adaptações específicas por ambiente
+- `integrations/` → integrações opcionais com fontes de design
+- `personas/` → schema e exemplos de personas
+- `templates/` → briefing, plano de teste e relatório
+- `examples/` → exemplos completos
 
-## Created by OutBoxLab
+## Exemplo
 
-Synthetic Personas originated as an applied UX research methodology and evolved into an open protocol for exploring concepts, journeys, wireframes and prototypes with AI-assisted synthetic participants.
+Veja `examples/first-test.md` para um exemplo compacto de ponta a ponta.
 
-OutBoxLab created and maintains the protocol and welcomes community experiments, critiques, adapters and contributions.
+## Idioma
+
+A experiência do wizard é multilíngue e deve utilizar automaticamente o idioma do usuário, salvo quando solicitado de outra forma.
+
+A documentação técnica interna permanece majoritariamente em inglês para facilitar portabilidade entre modelos, agentes e colaboração open source.
+
+## Criado pela OutBoxLab
+
+Synthetic Personas nasceu como uma metodologia aplicada de UX Research e evoluiu para um protocolo aberto para explorar conceitos, jornadas, wireframes e protótipos com participantes sintéticos assistidos por IA.
+
+A **OutBoxLab** criou e mantém o protocolo e recebe experimentos da comunidade, críticas metodológicas, novos adapters e contribuições.
+
+🌐 [outboxlab.com.br](https://outboxlab.com.br)
 
 ## Feedback
 
-This beta is intentionally public. Feedback, test cases, adapter contributions and methodological critiques are welcome through GitHub Issues and pull requests.
+Este beta é intencionalmente público.
 
-Use the issue templates for beta feedback, methodology feedback, bugs or adapter requests.
+Experimente o protocolo em diferentes modelos, compartilhe casos de uso, questione a metodologia, reporte problemas ou proponha melhorias por meio das Issues e Pull Requests do GitHub.
 
-## License
+## Licença
 
-Synthetic Personas is released under the MIT License. See `LICENSE`.
+Synthetic Personas é distribuído sob a **Licença MIT**. Consulte `LICENSE`.
 
 Copyright © 2026 OutBoxLab.
 
-## Version
+## Versão
 
 `0.1.0-beta`
