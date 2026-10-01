@@ -2,15 +2,23 @@
 
 **Test ideas before testing people.**
 
-Synthetic Personas is an open protocol for AI-assisted synthetic usability testing across LLMs and agent environments.
+An open protocol for AI-assisted synthetic usability testing across LLMs and agent environments.
 
-> Public beta: `v0.1.0-beta`
+**Created and maintained by OutBoxLab.**
 
-It guides AI agents through structured synthetic usability tests for concepts, journeys, wireframes and prototypes while keeping simulated behavior clearly separated from real user evidence.
+> Public beta: `v0.1.0-beta` · MIT Licensed
+
+Synthetic Personas guides AI agents through structured synthetic usability tests for concepts, journeys, wireframes and prototypes while keeping simulated behavior clearly separated from real user evidence.
+
+## Why Synthetic Personas?
+
+Product teams often need to explore an idea before formal research is available or before a prototype is mature enough for a full study. Synthetic Personas provides a structured way to use AI for that exploration without pretending simulations are real users.
+
+It is designed as an open protocol rather than a model-specific prompt, so the methodology can travel across ChatGPT, Claude, Hermes and other agent environments.
 
 ## What it does
 
-The conversational wizard helps you define the research goal, understand prototype fidelity, inspect available materials, select or create personas, formulate neutral missions, run the simulation and synthesize findings.
+The conversational wizard helps define the research goal, understand prototype fidelity, inspect available materials, select or create personas, formulate neutral missions, run simulations and synthesize findings.
 
 You do not need to know how to structure a usability test before starting.
 
@@ -26,17 +34,17 @@ Make the repository files available in the Claude environment/project. Start wit
 Make the repository available to the Hermes workspace/agent. Load `SKILL.md` and `adapters/hermes/SKILL.md`, then say `Install Personas`.
 
 ### Other agents
-Load `SKILL.md` and `adapters/generic/SYSTEM_PROMPT.md`. The protocol will adapt to the capabilities actually available.
+Load `SKILL.md` and `adapters/generic/SYSTEM_PROMPT.md`. The protocol adapts to the capabilities actually available.
 
 > Exact installation mechanics vary by host. Synthetic Personas does not require a specific vendor, MCP server or design integration.
 
 ## Your first test
 
-After setup, say `New Test` or its equivalent in your language. The wizard will progressively guide you through:
+After setup, say `New Test` or its equivalent in your language.
 
 `Project → Fidelity → Materials → Personas → Learning goals → Missions → Test plan → Run → Synthesis → Report`
 
-It skips information you already provided instead of turning setup into a questionnaire marathon.
+The wizard skips information already provided instead of turning setup into a questionnaire marathon.
 
 ## Inputs
 
@@ -82,7 +90,13 @@ The protocol separates provided evidence, synthetic behavior, interpretation, hy
 
 ## Language
 
-Repository documentation is maintained in English for portability and open-source collaboration. The wizard itself is multilingual and should automatically use the user's language unless asked otherwise.
+Repository documentation is maintained in English for portability and open-source collaboration. The wizard is multilingual and should automatically use the user's language unless asked otherwise.
+
+## Created by OutBoxLab
+
+Synthetic Personas originated as an applied UX research methodology and evolved into an open protocol for exploring concepts, journeys, wireframes and prototypes with AI-assisted synthetic participants.
+
+OutBoxLab created and maintains the protocol and welcomes community experiments, critiques, adapters and contributions.
 
 ## Feedback
 
@@ -92,7 +106,9 @@ Use the issue templates for beta feedback, methodology feedback, bugs or adapter
 
 ## License
 
-A project license is being selected during the public beta. Until a license is added, default copyright rules apply.
+Synthetic Personas is released under the MIT License. See `LICENSE`.
+
+Copyright © 2026 OutBoxLab.
 
 ## Version
 
