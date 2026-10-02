@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Se você utilizar o Synthetic Personas em pesquisa, ensino ou trabalho publicado, cite este projeto."
+title: "Synthetic Personas"
+type: software
+authors:
+  - name: "OutBoxLab"
+version: "0.1.0-beta"
+date-released: "2026-10-01"
+url: "https://github.com/outboxlab/synthetic-personas"
+repository-code: "https://github.com/outboxlab/synthetic-personas"
+license: MIT
+abstract: "Open protocol for AI-assisted synthetic usability testing across LLMs and agent environments."
+keywords:
+  - UX research
+  - usability testing
+  - synthetic personas
+  - artificial intelligence
+  - LLM
+  - product design
