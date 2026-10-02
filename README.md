@@ -10,6 +10,12 @@ Um protocolo aberto para testes de usabilidade sintéticos assistidos por IA, co
 
 🇧🇷 **Português** · [🇺🇸 English](README.en.md)
 
+### Comece em poucos minutos
+
+**[Instalar](#comece-aqui) · [Executar o primeiro teste](#seu-primeiro-teste) · [Ver exemplo](examples/first-test.md) · [Dar feedback](https://github.com/outboxlab/synthetic-personas/issues)**
+
+> ⭐ Se o Synthetic Personas for útil para você, marque o repositório com uma Star para acompanhar a evolução do protocolo.
+
 Synthetic Personas guia agentes de IA na execução de testes estruturados de usabilidade sintética para conceitos, jornadas, wireframes e protótipos, mantendo o comportamento simulado claramente separado de evidências obtidas com usuários reais.
 
 ## Por que Synthetic Personas?
